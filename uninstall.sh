@@ -1,2 +1,3 @@
-#!/bin/bash
-# Use only if you need to undo changes on the user system such as removing software
+#!/usr/bin/env bash
+
+rm plugins/jarvis-GSM-TC35/GSMTC35/GSMTC35.py
