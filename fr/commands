@@ -1,1 +1,12 @@
-*HELLO WORLD*==say "Hello World"
+*ENVOI*SMS*JANE*==say "Dictez le SMS à envoyer à Jane"
+>(*)==jv_pg_gt_send_sms var_jv_pg_gt_jane_doe_phone "(1)" Jane
+
+*ENVOI*SMS*QUENTIN*==say "Dictez le SMS à envoyer à Quentin"
+>(*)==jv_pg_gt_send_sms var_jv_pg_gt_john_doe_phone "(1)" John
+
+*APPEL*JANE*==jv_pg_gt_call var_jv_pg_gt_jane_doe_phone Jane
+*APPEL*JOHN*==jv_pg_gt_call var_jv_pg_gt_john_doe_phone John
+
+*RACCROCH*==jv_pg_gt_hang_up
+
+*DECROCH*==jv_pg_gt_pick_up
