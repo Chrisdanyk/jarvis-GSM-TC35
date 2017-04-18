@@ -1,0 +1,11 @@
+*SEND*SMS*JANE*==say "Read out the SMS to send to Jane"
+>(*)==jv_pg_gt_send_sms var_jv_pg_gt_jane_doe_phone "(1)" Jane
+*SEND*SMS*JOHN*==say "Read out the SMS to send to John"
+>(*)==jv_pg_gt_send_sms var_jv_pg_gt_john_doe_phone "(1)" John
+
+*CALL*JANE*==jv_pg_gt_call var_jv_pg_gt_jane_doe_phone Jane
+*CALL*JOHN*==jv_pg_gt_call var_jv_pg_gt_john_doe_phone John
+
+*HANG*UP*==jv_pg_gt_hang_up
+
+*PICK*UP*==jv_pg_gt_pick_up
