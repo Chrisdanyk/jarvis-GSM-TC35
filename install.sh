@@ -12,4 +12,4 @@
 sudo pip install pyserial
 
 # Copy latest version of GSM-TC35 python script
-wget -P plugins/jarvis-GSM-TC35/GSMTC35/ https://raw.githubusercontent.com/QuentinCG/GSM-TC35-Python-Library/master/GSMTC35/GSMTC35.py
+wget -P GSMTC35/ https://raw.githubusercontent.com/QuentinCG/GSM-TC35-Python-Library/master/GSMTC35/GSMTC35.py
