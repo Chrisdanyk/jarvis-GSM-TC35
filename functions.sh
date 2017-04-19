@@ -48,7 +48,7 @@ jv_pg_gt_hang_up()
 }
 
 # Pick up call
-jv_pg_gt_hang_up()
+jv_pg_gt_pick_up()
 {
   # Send request to GSM module
   result="$(python plugins/jarvis-GSM-TC35/GSMTC35/GSMTC35.py --serialPort $var_jv_pg_gt_com_port --pin $var_jv_pg_gt_pin --pickUpCall)"
