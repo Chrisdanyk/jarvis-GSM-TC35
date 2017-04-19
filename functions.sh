@@ -7,7 +7,7 @@
 jv_pg_gt_send_sms()
 {
   # Send request to GSM module
-  result="$(python plugins/jarvis-GSM-TC35/GSMTC35/GSMTC35.py --serialPort $var_jv_pg_gt_com_port --pin $var_jv_pg_gt_pin --sendSMS $1 \"$2\")"
+  result="$(python plugins/jarvis-GSM-TC35/GSMTC35/GSMTC35.py --serialPort $var_jv_pg_gt_com_port --pin $var_jv_pg_gt_pin --sendSMS $1 $2)"
 
   # Show the result to user
   if [[ $result =~ "True" ]]; then
