@@ -10,7 +10,7 @@ jv_pg_gt_send_sms()
   result=`python plugins/jarvis-GSM-TC35/GSMTC35/GSMTC35.py --serialPort $var_jv_pg_gt_com_port --pin $var_jv_pg_gt_pin --sendSMS $1 "$2"`
 
   # Show the result to user
-  if [[ $result =~ "True" ]]; then
+  if [[ $result =~ "SMS sent: True" ]]; then
     say "$(jv_pg_gt_lang send_sms_success $3)"
   else
     say "$(jv_pg_gt_lang send_sms_failed $3)"
@@ -26,7 +26,7 @@ jv_pg_gt_call()
   result=`python plugins/jarvis-GSM-TC35/GSMTC35/GSMTC35.py --serialPort $var_jv_pg_gt_com_port --pin $var_jv_pg_gt_pin --call $1`
 
   # Show the result to user
-  if [[ $result =~ "True" ]]; then
+  if [[ $result =~ "Call picked up: True" ]]; then
     say "$(jv_pg_gt_lang call_success $2)"
   else
     say "$(jv_pg_gt_lang call_failed $2)"
@@ -40,7 +40,7 @@ jv_pg_gt_hang_up()
   result=`python plugins/jarvis-GSM-TC35/GSMTC35/GSMTC35.py --serialPort $var_jv_pg_gt_com_port --pin $var_jv_pg_gt_pin --hangUpCall`
 
   # Show the result to user
-  if [[ $result =~ "True" ]]; then
+  if [[ $result =~ "Hang up call: True" ]]; then
     say "$(jv_pg_gt_lang hang_up_success)"
   else
     say "$(jv_pg_gt_lang hang_up_failed)"
@@ -54,7 +54,7 @@ jv_pg_gt_pick_up()
   result=`python plugins/jarvis-GSM-TC35/GSMTC35/GSMTC35.py --serialPort $var_jv_pg_gt_com_port --pin $var_jv_pg_gt_pin --pickUpCall`
 
   # Show the result to user
-  if [[ $result =~ "True" ]]; then
+  if [[ $result =~ "Pick up call: True" ]]; then
     say "$(jv_pg_gt_lang pick_up_success)"
   else
     say "$(jv_pg_gt_lang pick_up_failed)"
