@@ -1,11 +1,17 @@
+*SEND*SMS*JANE*QUIETLY*==jv_pg_gt_send_sms $var_jv_pg_gt_jane_doe_phone "Hello Jane" Jane True
+*SEND*SMS*SPECIAL*CHAR*JANE*==jv_pg_gt_send_sms $var_jv_pg_gt_jane_doe_phone "AahAhahaAh <3 !" Jane
+
 *SEND*SMS*JANE*==say "Read out the SMS to send to Jane"
 >(*)==jv_pg_gt_send_sms $var_jv_pg_gt_jane_doe_phone "(1)" Jane
 *SEND*SMS*JOHN*==say "Read out the SMS to send to John"
 >(*)==jv_pg_gt_send_sms $var_jv_pg_gt_john_doe_phone "(1)" John
 
+*CALL*JANE*QUIETLY*==jv_pg_gt_call $var_jv_pg_gt_jane_doe_phone Jane True
 *CALL*JANE*==jv_pg_gt_call $var_jv_pg_gt_jane_doe_phone Jane
 *CALL*JOHN*==jv_pg_gt_call $var_jv_pg_gt_john_doe_phone John
 
+*HANG*UP*QUIETLY*==jv_pg_gt_hang_up True
 *HANG*UP*==jv_pg_gt_hang_up
 
+*PICK*UP*QUIETLY*==jv_pg_gt_pick_up True
 *PICK*UP*==jv_pg_gt_pick_up

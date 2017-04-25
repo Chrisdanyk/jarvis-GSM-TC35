@@ -1,13 +1,17 @@
+*ENVOI*SMS*JANE*DISCRETEMENT*==jv_pg_gt_send_sms $var_jv_pg_gt_jane_doe_phone "Message discret" Jane True
+*ENVOI*SMS*AVEC*CHAR*SPECIAUX*JANE*==jv_pg_gt_send_sms $var_jv_pg_gt_jane_doe_phone "AahAhahaAh <3 !" Jane
+
 *ENVOI*SMS*JANE*==say "Dictez le SMS à envoyer à Jane"
 >(*)==jv_pg_gt_send_sms $var_jv_pg_gt_jane_doe_phone "(1)" Jane
 *ENVOI*SMS*JOHN*==say "Dictez le SMS à envoyer à John"
 >(*)==jv_pg_gt_send_sms $var_jv_pg_gt_john_doe_phone "(1)" John
 
-*ENVOI*SMS*AVEC*CHAR*SPECIAUX*JANE*==jv_pg_gt_send_sms $var_jv_pg_gt_jane_doe_phone "AahAhahaAh <3 !" Jane
-
 *APPEL*JANE*==jv_pg_gt_call $var_jv_pg_gt_jane_doe_phone Jane
+*APPEL*JOHN*DISCRETEMENT==jv_pg_gt_call $var_jv_pg_gt_john_doe_phone John True
 *APPEL*JOHN*==jv_pg_gt_call $var_jv_pg_gt_john_doe_phone John
 
+*RACCROCH*DISCRETEMENT==jv_pg_gt_hang_up True
 *RACCROCH*==jv_pg_gt_hang_up
 
+*DECROCH*DISCRETEMENT==jv_pg_gt_pick_up True
 *DECROCH*==jv_pg_gt_pick_up
