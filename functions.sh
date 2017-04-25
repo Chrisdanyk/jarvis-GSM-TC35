@@ -7,7 +7,8 @@
 jv_pg_gt_send_sms()
 {
   # Send request to GSM module
-  result=`python plugins/jarvis-GSM-TC35/GSMTC35/GSMTC35.py --serialPort $var_jv_pg_gt_com_port --pin $var_jv_pg_gt_pin --sendSMS $1 "$2"`
+  local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  local result=`python $dir/GSMTC35/GSMTC35.py --serialPort $var_jv_pg_gt_com_port --pin $var_jv_pg_gt_pin --sendSMS $1 "$2"`
 
   # Show the result to user
   if [[ $result =~ "SMS sent: True" ]]; then
@@ -23,7 +24,8 @@ jv_pg_gt_send_sms()
 jv_pg_gt_call()
 {
   # Send request to GSM module
-  result=`python plugins/jarvis-GSM-TC35/GSMTC35/GSMTC35.py --serialPort $var_jv_pg_gt_com_port --pin $var_jv_pg_gt_pin --call $1`
+  local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  local result=`python $dir/GSMTC35/GSMTC35.py --serialPort $var_jv_pg_gt_com_port --pin $var_jv_pg_gt_pin --call $1`
 
   # Show the result to user
   if [[ $result =~ "Call picked up: True" ]]; then
@@ -37,7 +39,8 @@ jv_pg_gt_call()
 jv_pg_gt_hang_up()
 {
   # Send request to GSM module
-  result=`python plugins/jarvis-GSM-TC35/GSMTC35/GSMTC35.py --serialPort $var_jv_pg_gt_com_port --pin $var_jv_pg_gt_pin --hangUpCall`
+  local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  local result=`python $dir/GSMTC35/GSMTC35.py --serialPort $var_jv_pg_gt_com_port --pin $var_jv_pg_gt_pin --hangUpCall`
 
   # Show the result to user
   if [[ $result =~ "Hang up call: True" ]]; then
@@ -51,7 +54,8 @@ jv_pg_gt_hang_up()
 jv_pg_gt_pick_up()
 {
   # Send request to GSM module
-  result=`python plugins/jarvis-GSM-TC35/GSMTC35/GSMTC35.py --serialPort $var_jv_pg_gt_com_port --pin $var_jv_pg_gt_pin --pickUpCall`
+  local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  local result=`python $dir/GSMTC35/GSMTC35.py --serialPort $var_jv_pg_gt_com_port --pin $var_jv_pg_gt_pin --pickUpCall`
 
   # Show the result to user
   if [[ $result =~ "Pick up call: True" ]]; then
