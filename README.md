@@ -1,5 +1,5 @@
 ## Description
-Send and received SMS/Calls with Jarvis (voice assistant) using the GSM TC35 module
+Send and received SMS/Calls with <a target="_blank" href="http://domotiquefacile.fr/jarvis/">Jarvis assistant</a> using the GSM TC35 module.
 
 
 <img src="https://raw.githubusercontent.com/QuentinCG/jarvis-GSM-TC35/master/TC35_module.jpg" width="800">
@@ -27,9 +27,9 @@ Jarvis: Appel en cours.
 
 1) Connect your GSM module to a serial port
 
-2) Get the port name (you can find it out by calling GSMTC35.py without arguments)
+2) Get the port name (you can find it out by calling ```python GSMTC35/GSMTC35.py``` without arguments from plugin folder)
 
-3) Add this plugin in <a target="_blank" href="http://domotiquefacile.fr/jarvis/content/plugins">Jarvis project</a>
+3) Add this plugin to your <a target="_blank" href="http://domotiquefacile.fr/jarvis/">Jarvis assistant</a> (<a target="_blank" href="http://domotiquefacile.fr/jarvis/content/plugins">more info here</a>): ```./jarvis.sh -p https://github.com/QuentinCG/jarvis-GSM-TC35```
 
 4) Configure the <a target="_blank" href="https://github.com/QuentinCG/jarvis-GSM-TC35/blob/master/config.sh">configuration file</a> to match your requirements.
 
