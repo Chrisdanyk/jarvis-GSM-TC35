@@ -10,7 +10,7 @@
 [[ -z $(which pip3) ]] && sudo apt-get install python3-pip
 
 # Install pyserial (needed for the GSMTC35 python library)
-sudo pip2 install pyserial
+sudo pip install pyserial
 sudo pip3 install pyserial
 
 # Copy latest version of GSM-TC35 python script
