@@ -11,7 +11,7 @@ jv_pg_gt_send_sms()
 {
   # Send request to GSM module
   local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-  local result=`python $dir/GSMTC35/GSMTC35.py --serialPort $var_jv_pg_gt_com_port --pin $var_jv_pg_gt_pin --sendSMS $1 "$2"`
+  local result=`python $dir/GSMTC35/GSMTC35.py --serialPort $var_jv_pg_gt_com_port --pin $var_jv_pg_gt_pin --sendSpecialSMS $1 "$2"`
 
   # Show the result to user (if requested)
   if [[ $result =~ "SMS sent: True" ]]; then
